@@ -15,16 +15,29 @@ public class AutoVehicle {
     private String model;
     private Boolean rented;
     private String linkimg;
+    private Integer price;
+    private Integer capacity;
+    private String number;
+
+
+    private double latitude;
+    private double longitude;
+    private String address;
+    private String sim;
 
     public AutoVehicle() {
     }
 
-    public AutoVehicle(Integer id, String brand, String model, Boolean rented, String linkimg) {
-        this.id = id;
-        this.brand = brand;
-        this.model = model;
-        this.rented = rented;
-        this.linkimg = linkimg;
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", rented=" + rented +
+                ", linkImg='" + linkimg + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 
     public Integer getId() {
@@ -37,16 +50,6 @@ public class AutoVehicle {
 
     public String getBrand() {
         return brand;
-    }
-
-    @Override
-    public String toString() {
-        return "Vehicle{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", rented=" + rented +
-                ", linkImg='" + linkimg + '\'' +
-                '}';
     }
 
     public void setBrand(String brand) {
@@ -73,7 +76,64 @@ public class AutoVehicle {
         return linkimg;
     }
 
-    public void setLinkimg(String linkImg) {
-        this.linkimg = linkImg;
+    public void setLinkimg(String linkimg) {
+        this.linkimg = linkimg;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Integer getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getSim() {
+        return sim;
+    }
+
+    public void setSim(String sim) {
+        this.sim = sim;
     }
 }

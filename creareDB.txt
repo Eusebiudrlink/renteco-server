@@ -1,0 +1,32 @@
+CREATE TABLE Users(
+id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+username varchar(100),
+password varchar(100)
+);
+
+CREATE TABLE Autovehicles(
+id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+brand varchar(50),
+model varchar(50),
+rented boolean,
+linkimg varchar(100),
+price int,
+capacity int,
+latitude double,
+longitude double,
+address varchar(50),
+sim varchar(13)
+);
+/poate sa separe autovehicles in doua tabele unul de locatie
+
+INSERT INTO Users(username,password) VALUES ('a','a');
+INSERT INTO Users(username,password) VALUES ('','');
+
+INSERT INTO autovehicles(brand,model,rented,linkimg,price,capacity,latitude,longitude,address,sim) VALUES
+('Bmw','320d',1,'https://i.postimg.cc/FR9kWK4H/OIP.jpg',120,5, 46.7712, 23.6236,'cluj','07..');
+
+INSERT INTO autovehicles(brand,model,rented,linkimg,price,capacity,latitude,longitude,address,sim) VALUES
+('Sangyong','Space',1,'https://i.postimg.cc/2jbtwdzy/sangyong.jpg',100,7, 46.7712, 23.6236,'cluj','07..');
+
+INSERT INTO autovehicles(brand,model,rented,linkimg,price,capacity,latitude,longitude,address,sim) VALUES
+('Suzuki','Vitara',1,'https://i.postimg.cc/gjCqS6H6/vitara.jpg',250,5, 46.7712, 23.6236,'cluj','07..');

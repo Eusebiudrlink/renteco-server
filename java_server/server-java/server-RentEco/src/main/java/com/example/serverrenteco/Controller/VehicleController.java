@@ -18,7 +18,7 @@ public class VehicleController {
     @Autowired
     private TokenValidator tokenValidator;
 
-    @GetMapping("")
+    @GetMapping("/")
     public ResponseEntity<List<AutoVehicle>> getAllItems(@RequestHeader("Authorization") String authorization) {
         System.out.println("Get all items");
         String jwtToken = authorization.substring(7);
@@ -27,6 +27,23 @@ public class VehicleController {
             List<AutoVehicle> vehicles = vehicleService.findAll();
             System.out.println(vehicles);
             return ResponseEntity.ok(vehicles);
+        }
+        else{
+            System.out.println("Token is invalid");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<AutoVehicle> update(@PathVariable("id") int id, @RequestHeader("Authorization") String authorization,@RequestBody AutoVehicle receivedVehicle) {
+        System.out.println("Update item with id = " + id);
+        String jwtToken = authorization.substring(7);
+        if(tokenValidator.validateToken(jwtToken)==true){
+            System.out.println("Token is valid");
+            AutoVehicle vehicle = vehicleService.update(id,receivedVehicle);
+            System.out.println(vehicle);
+            return ResponseEntity.ok(vehicle);
         }
         else{
             System.out.println("Token is invalid");

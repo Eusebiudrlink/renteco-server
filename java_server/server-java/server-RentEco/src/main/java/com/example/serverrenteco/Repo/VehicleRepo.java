@@ -11,4 +11,8 @@ public interface VehicleRepo extends JpaRepository<AutoVehicle, Long> {
 
      List<AutoVehicle> findAll();
 
+     AutoVehicle findById(int id);
+
+     AutoVehicle save(AutoVehicle autoVehicle);
+
 }
