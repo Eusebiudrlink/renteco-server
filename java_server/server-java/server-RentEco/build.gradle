@@ -28,6 +28,7 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.15'
     implementation 'org.hibernate:hibernate-core:6.1.4.Final'
     implementation 'org.hibernate.validator:hibernate-validator'
+   // implementation 'hibernate-commons-annotations: 6.0.5.Final'
 
     //spring security(nu am nevoei pe moment)
 

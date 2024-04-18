@@ -11,9 +11,15 @@ public class UserService {
     @Autowired
     private UserRepo userRepo;;
     public void save(User user) {
+        userRepo.save(user);
     }
 
-    public User findByUsername(String username) {
-       return userRepo.findByUsername(username);
+    public User findByEmail(String username) {
+        try{
+            return userRepo.findByEmail(username);
+        } catch (Exception e) {
+            System.out.println("User not found  ");
+            return null;
+        }
     }
 }

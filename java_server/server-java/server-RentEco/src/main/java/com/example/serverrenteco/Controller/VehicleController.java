@@ -41,9 +41,14 @@ public class VehicleController {
         String jwtToken = authorization.substring(7);
         if(tokenValidator.validateToken(jwtToken)==true){
             System.out.println("Token is valid");
-            AutoVehicle vehicle = vehicleService.update(id,receivedVehicle);
-            System.out.println(vehicle);
-            return ResponseEntity.ok(vehicle);
+            try {
+                AutoVehicle vehicle = vehicleService.update(id, receivedVehicle);
+                System.out.println("De ce id ul "+vehicle.getId()+vehicle);
+                return ResponseEntity.ok(vehicle);
+            } catch (Exception e) {
+                System.out.println("Error on updateVehicle");
+                return ResponseEntity.notFound().build();
+            }
         }
         else{
             System.out.println("Token is invalid");

@@ -9,20 +9,41 @@ import jakarta.persistence.*;
 public class AutoVehicle {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
+
+    @Column(name = "brand")
     private String brand;
+
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "rented")
     private Boolean rented;
+
+    @Column(name = "linkimg")
     private String linkimg;
+
+    @Column(name = "price")
     private Integer price;
+
+    @Column(name = "capacity")
     private Integer capacity;
+
+    @Column(name = "number")
     private String number;
 
-
+    @Column(name = "latitude")
     private double latitude;
+
+    @Column(name = "longitude")
     private double longitude;
+
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "sim")
     private String sim;
 
     public AutoVehicle() {
@@ -35,7 +56,7 @@ public class AutoVehicle {
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", rented=" + rented +
-                ", linkImg='" + linkimg + '\'' +
+                ", linkimg='" + linkimg + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }

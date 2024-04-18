@@ -5,29 +5,23 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 public class UserCredentials {
 
 
-    private String username;
-    private String password;
+    private String email;
+    private String user_password;
 
     public UserCredentials() {
     }
 
     @JsonCreator(mode = JsonCreator.Mode.DEFAULT)
-    public UserCredentials(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public UserCredentials(String email, String user_password) {
+        this.email = email;
+        this.user_password = user_password;
     }
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
-    public String getPassword() {
-        return password;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public String getUser_password() {
+        return user_password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+
 }
