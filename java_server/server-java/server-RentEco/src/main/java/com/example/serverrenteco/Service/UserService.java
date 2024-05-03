@@ -10,8 +10,9 @@ public class UserService {
 
     @Autowired
     private UserRepo userRepo;;
-    public void save(User user) {
-        userRepo.save(user);
+    public User save(User user) {
+        return userRepo.save(user);
+
     }
 
     public User findByEmail(String username) {
