@@ -1,4 +1,4 @@
-package com.example.serverrenteco.Model;
+package com.example.serverrenteco.Domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

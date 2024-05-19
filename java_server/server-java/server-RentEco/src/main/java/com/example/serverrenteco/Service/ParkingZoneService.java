@@ -1,10 +1,8 @@
 package com.example.serverrenteco.Service;
 
 import com.example.serverrenteco.GPSUtils;
-import com.example.serverrenteco.Model.ParkingZone;
-import com.example.serverrenteco.Model.Ride;
+import com.example.serverrenteco.Domain.ParkingZone;
 import com.example.serverrenteco.Repo.ParkingZoneRepo;
-import com.example.serverrenteco.Repo.RideRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

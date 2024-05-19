@@ -1,6 +1,6 @@
 package com.example.serverrenteco.Controller;
 
-import com.example.serverrenteco.Model.AutoVehicle;
+import com.example.serverrenteco.Domain.AutoVehicle;
 import com.example.serverrenteco.Service.VehicleService;
 import com.example.serverrenteco.Validators.TokenValidator;
 import org.springframework.beans.factory.annotation.Autowired;

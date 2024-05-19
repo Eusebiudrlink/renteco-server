@@ -1,6 +1,5 @@
 package com.example.serverrenteco;
 
-import com.example.serverrenteco.Model.Ride;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

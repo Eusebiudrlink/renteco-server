@@ -1,6 +1,6 @@
 package com.example.serverrenteco.Repo;
 
-import com.example.serverrenteco.Model.AutoVehicle;
+import com.example.serverrenteco.Domain.AutoVehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

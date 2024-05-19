@@ -1,12 +1,8 @@
 package com.example.serverrenteco.Controller;
 
 
-import com.example.serverrenteco.JwtConfig;
-import com.example.serverrenteco.Model.AutoVehicle;
-import com.example.serverrenteco.Model.Ride;
-import com.example.serverrenteco.Model.User;
+import com.example.serverrenteco.Domain.Ride;
 import com.example.serverrenteco.Service.RideService;
-import com.example.serverrenteco.Service.UserService;
 import com.example.serverrenteco.Validators.TokenValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

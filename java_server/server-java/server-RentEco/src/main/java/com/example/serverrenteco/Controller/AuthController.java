@@ -1,10 +1,8 @@
 package com.example.serverrenteco.Controller;
 
 import com.example.serverrenteco.JwtConfig;
-import com.example.serverrenteco.Model.AutoVehicle;
-import com.example.serverrenteco.Model.UserCredentials;
 import com.example.serverrenteco.Service.UserService;
-import com.example.serverrenteco.Model.User;
+import com.example.serverrenteco.Domain.User;
 import com.example.serverrenteco.Validators.TokenValidator;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController

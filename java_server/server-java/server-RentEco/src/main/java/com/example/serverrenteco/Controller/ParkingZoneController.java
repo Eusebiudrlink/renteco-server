@@ -1,17 +1,12 @@
 package com.example.serverrenteco.Controller;
 
-import com.example.serverrenteco.Model.ParkingZone;
-import com.example.serverrenteco.Model.Ride;
-import com.example.serverrenteco.Model.User;
+import com.example.serverrenteco.Domain.ParkingZone;
 import com.example.serverrenteco.Service.ParkingZoneService;
-import com.example.serverrenteco.Service.RideService;
 import com.example.serverrenteco.Validators.TokenValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/parkingzone")

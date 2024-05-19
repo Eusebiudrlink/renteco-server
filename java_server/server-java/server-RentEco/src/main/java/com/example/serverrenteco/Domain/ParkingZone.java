@@ -1,4 +1,4 @@
-package com.example.serverrenteco.Model;
+package com.example.serverrenteco.Domain;
 
 import jakarta.persistence.*;
 

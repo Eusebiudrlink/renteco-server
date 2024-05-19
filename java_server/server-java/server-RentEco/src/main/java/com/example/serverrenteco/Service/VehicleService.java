@@ -1,6 +1,6 @@
 package com.example.serverrenteco.Service;
 
-import com.example.serverrenteco.Model.AutoVehicle;
+import com.example.serverrenteco.Domain.AutoVehicle;
 import com.example.serverrenteco.Repo.VehicleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +19,7 @@ public class VehicleService {
     }
 
     public void save(AutoVehicle vehicle) {
+        vehicleRepo.save(vehicle);
     }
 
     public List<AutoVehicle> findAll() {
@@ -28,6 +29,7 @@ public class VehicleService {
     public AutoVehicle update(int id, AutoVehicle receivedVehicle) {
         AutoVehicle autoVehicle = vehicleRepo.findById(id);
         System.out.println("actual: "+receivedVehicle.getRented()+" in baza de date: "+autoVehicle.getRented());
+        System.out.println("addresa update strada:"+receivedVehicle.getAddress());
         if (autoVehicle.getRented() == false && receivedVehicle.getRented() == true)//daca nu e deja inchiriat si vreau sa il inchiriez
         {
             //autoVehicle.setRented(true);

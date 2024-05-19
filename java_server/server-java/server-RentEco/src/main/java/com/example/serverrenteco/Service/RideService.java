@@ -1,9 +1,7 @@
 package com.example.serverrenteco.Service;
 
-import com.example.serverrenteco.Model.AutoVehicle;
-import com.example.serverrenteco.Model.Ride;
+import com.example.serverrenteco.Domain.Ride;
 import com.example.serverrenteco.Repo.RideRepo;
-import com.example.serverrenteco.Repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
