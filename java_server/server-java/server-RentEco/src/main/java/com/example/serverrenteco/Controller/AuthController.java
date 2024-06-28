@@ -54,7 +54,7 @@ public class AuthController {
     public ResponseEntity<?> update(@RequestHeader("Authorization") String authorization,@RequestBody User user) {
         String jwtToken = authorization.substring(7);
         if(tokenValidator.validateToken(jwtToken)==true){
-            System.out.println("Token is valid");
+            System.out.println("Token is valid update user");
             User userUpdated = userService.save(user);
             return ResponseEntity.ok(userUpdated);
         }

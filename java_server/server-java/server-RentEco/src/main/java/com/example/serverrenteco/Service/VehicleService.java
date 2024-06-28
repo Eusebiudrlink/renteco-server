@@ -28,7 +28,6 @@ public class VehicleService {
 
     public AutoVehicle update(int id, AutoVehicle receivedVehicle) {
         AutoVehicle autoVehicle = vehicleRepo.findById(id);
-        System.out.println("actual status vehicle : "+receivedVehicle.getRented()+" in baza de date: "+autoVehicle.getRented());
         if (autoVehicle.getRented() == false && receivedVehicle.getRented() == true)//daca nu e deja inchiriat si vreau sa il inchiriez
         {
             autoVehicle.setRented(true);

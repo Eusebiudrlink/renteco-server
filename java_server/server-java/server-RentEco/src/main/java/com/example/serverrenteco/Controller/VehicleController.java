@@ -43,7 +43,6 @@ public class VehicleController {
             System.out.println("Token is valid");
             try {
                 AutoVehicle vehicle = vehicleService.update(id, receivedVehicle);
-                System.out.println("De ce id ul "+vehicle.getId()+vehicle);
                 return ResponseEntity.ok(vehicle);
             } catch (Exception e) {
                 System.out.println("Error on updateVehicle");
