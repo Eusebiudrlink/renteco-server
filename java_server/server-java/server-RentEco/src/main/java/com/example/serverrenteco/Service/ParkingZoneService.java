@@ -15,7 +15,7 @@ public class ParkingZoneService {
 
     public ParkingZone findParkingZone(ParkingZone vehicleParkingZone) {
         List<ParkingZone> parkingZones= parkingZoneRepo.findAll();
-        double radius = 0.1; //100 metri
+        double radius = 0.2; //100 metri
         for(ParkingZone parkingZone1:parkingZones){
             Boolean isWithinPerimeter = GPSUtils.isWithinRadius(
                     parkingZone1.getLatitude(),parkingZone1.getLongitude(),

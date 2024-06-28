@@ -58,7 +58,7 @@ public class AuthController {
             User userUpdated = userService.save(user);
             return ResponseEntity.ok(userUpdated);
         }
-        else{
+            else{
             System.out.println("Token is invalid");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }

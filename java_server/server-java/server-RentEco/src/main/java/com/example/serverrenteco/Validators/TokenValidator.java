@@ -21,6 +21,7 @@ public class TokenValidator {
     public boolean validateToken(String token) {
 
         try{
+            //System.out.println(token);
             Claims claims = Jwts.parser()
                     .setSigningKey(jwtConfig.getJwtSecret()) // cheia secretă utilizată pentru semnare (dacă este semnat)
                     .parseClaimsJws(token)
@@ -32,6 +33,8 @@ public class TokenValidator {
             }
             return true;
         }catch(JwtException e){
+            System.out.println("Invalid token");
+            System.out.println(e.getMessage());
             return false;
         }
     }

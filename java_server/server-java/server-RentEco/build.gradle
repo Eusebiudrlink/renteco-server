@@ -30,7 +30,12 @@ dependencies {
     implementation 'org.hibernate.validator:hibernate-validator'
    // implementation 'hibernate-commons-annotations: 6.0.5.Final'
 
-    //spring security(nu am nevoei pe moment)
+    //testare
+    testImplementation 'org.mockito:mockito-core:5.11.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.3.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.6.0'
 
 
 

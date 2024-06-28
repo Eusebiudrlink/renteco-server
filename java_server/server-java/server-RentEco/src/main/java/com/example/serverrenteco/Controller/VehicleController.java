@@ -65,5 +65,5 @@ public class VehicleController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    // Implementați alte metode pentru actualizare și ștergere a elementelor
+
 }
