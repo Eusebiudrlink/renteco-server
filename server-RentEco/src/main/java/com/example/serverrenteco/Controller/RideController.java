@@ -41,7 +41,6 @@ public class RideController {
         if(tokenValidator.validateToken(jwtToken)==true){
             System.out.println("Token is valid");
             List<Ride> rides = rideService.findAll();
-            System.out.println(rides);
             return ResponseEntity.ok(rides);
         }
         else{

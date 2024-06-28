@@ -25,7 +25,6 @@ public class VehicleController {
         if(tokenValidator.validateToken(jwtToken)==true){
             System.out.println("Token is valid");
             List<AutoVehicle> vehicles = vehicleService.findAll();
-            System.out.println(vehicles);
             return ResponseEntity.ok(vehicles);
         }
         else{
